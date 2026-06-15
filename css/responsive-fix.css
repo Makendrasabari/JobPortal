@@ -483,7 +483,8 @@ html[style*="visibility: hidden"] body { visibility: hidden; }
 @media (max-width: 320px) {
   .db-body { padding: 0.625rem; }
   .db-card { padding: 0.75rem; }
-  .db-header { padding: 0 0.625rem; height: 60px; min-height: 60px; }
+  .db-header { padding: 0.75rem 0.625rem; display: flex; align-items: center; justify-content: space-between; }
+  .db-header-user-mobile { display: none !important; }
 }
 
 /* ── 28. Prevent text overflow everywhere ── */
