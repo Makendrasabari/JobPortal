@@ -27,7 +27,9 @@
   <div id="preloader">
     <div class="preloader-content">
       <img src="images/logo5.webp" alt="Stackly Icon Logo" class="preloader-logo">
-      <div class="preloader-spinner"></div>
+      <div class="preloader-line-wrap">
+        <div class="preloader-line"></div>
+      </div>
       <p class="preloader-text">Connecting talent with opportunity...</p>
     </div>
   </div>
@@ -86,7 +88,7 @@
           <i class="fas fa-briefcase"></i> Explore Jobs
         </div>
         <h1 style="color: var(--white); font-size: 3.5rem; font-weight: 800; margin-bottom: 1.5rem; letter-spacing: -0.03em;">Find Your Next Role</h1>
-        <p style="font-size: 1.25rem; color: var(--slate-400); max-width: 700px; margin: 0 auto 3rem auto; line-height: 1.7;">Search and apply for open tech positions in our network. Find vetted jobs matching your tech stack, location, and salary goals.</p>
+        <p style="font-size: 1.25rem; color: rgba(255, 255, 255, 0.9); max-width: 700px; margin: 0 auto 3rem auto; line-height: 1.7;">Search and apply for open tech positions in our network. Find vetted jobs matching your tech stack, location, and salary goals.</p>
         
         <div class="search-panel-glass" data-aos="zoom-in" data-aos-delay="100">
           <div class="search-panel-grid">
@@ -416,6 +418,7 @@
       duration: 800,
       easing: 'ease-in-out',
       once: false,
+      mirror: true,
       offset: 100
     });
 
@@ -528,7 +531,7 @@
 
       if (simScore === 0) {
         statusEl.textContent = 'Select skills to trigger calculations.';
-        pctEl.style.color = '#94a3b8';
+        pctEl.style.color = '#4486f2';
       } else if (simScore < 40) {
         statusEl.textContent = 'Low match index. Add Node, AWS or React skills to increase.';
         pctEl.style.color = '#ef4444';

@@ -441,7 +441,7 @@ html[style*="visibility: hidden"] body { visibility: hidden; }
 /* ── 25. Support FAQ ── */
 .db-support-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: 1.5rem;
   align-items: start;
 }
@@ -617,7 +617,7 @@ body.no-scroll {
 
 .db-body::-webkit-scrollbar-track { background: transparent; }
 .db-body::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
-.db-body::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+.db-body::-webkit-scrollbar-thumb:hover { background: #4486f2; }
 
 /* ── 40. Tab button bar (mobile) ── */
 @media (max-width: 640px) {

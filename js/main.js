@@ -189,7 +189,9 @@ function initCounters() {
           };
           
           updateCount();
-          observer.unobserve(counter);
+        } else {
+          // Reset counter to 0 when it leaves the viewport
+          entry.target.innerText = "0";
         }
       });
     }, options);

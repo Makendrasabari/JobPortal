@@ -25,7 +25,9 @@
   <div id="preloader">
     <div class="preloader-content">
       <img src="images/logo5.webp" alt="Stackly Icon Logo" class="preloader-logo">
-      <div class="preloader-spinner"></div>
+      <div class="preloader-line-wrap">
+        <div class="preloader-line"></div>
+      </div>
       <p class="preloader-text">Connecting talent with opportunity...</p>
     </div>
   </div>
@@ -313,36 +315,71 @@
           <p>Join engineering departments scaling teams with vetted technical talent sourced from Stackly.</p>
         </div>
         
-        <div class="companies-grid">
-          <div class="company-logo-card" data-aos="fade-up" onclick="viewCompany('vortex')">
-            <i class="fab fa-slack-hash" style="font-size:2.5rem; color:#4a154b; margin-bottom:1rem;"></i>
-            <h4>Vortex Tech</h4>
-            <span>3 Open Jobs</span>
-          </div>
-          <div class="company-logo-card" data-aos="fade-up" data-aos-delay="50" onclick="viewCompany('saasify')">
-            <i class="fab fa-salesforce" style="font-size:2.5rem; color:#00a1e0; margin-bottom:1rem;"></i>
-            <h4>SaaSify</h4>
-            <span>5 Open Jobs</span>
-          </div>
-          <div class="company-logo-card" data-aos="fade-up" data-aos-delay="100" onclick="viewCompany('apex')">
-            <i class="fab fa-atlassian" style="font-size:2.5rem; color:#0052cc; margin-bottom:1rem;"></i>
-            <h4>Apex Creative</h4>
-            <span>2 Open Jobs</span>
-          </div>
-          <div class="company-logo-card" data-aos="fade-up" data-aos-delay="150" onclick="viewCompany('cloudcore')">
-            <i class="fab fa-aws" style="font-size:2.5rem; color:#ff9900; margin-bottom:1rem;"></i>
-            <h4>CloudCore</h4>
-            <span>4 Open Jobs</span>
-          </div>
-          <div class="company-logo-card" data-aos="fade-up" data-aos-delay="200" onclick="viewCompany('scalelabs')">
-            <i class="fab fa-hubspot" style="font-size:2.5rem; color:#ff7a59; margin-bottom:1rem;"></i>
-            <h4>ScaleLabs</h4>
-            <span>1 Open Job</span>
-          </div>
-          <div class="company-logo-card" data-aos="fade-up" data-aos-delay="250" onclick="viewCompany('helpdesk')">
-            <i class="fab fa-jira" style="font-size:2.5rem; color:#0052cc; margin-bottom:1rem;"></i>
-            <h4>Helpdesk Inc</h4>
-            <span>6 Open Jobs</span>
+        <div class="partners-marquee">
+          <div class="partners-marquee-track">
+            <!-- First Set of Companies -->
+            <div class="company-logo-card">
+              <i class="fab fa-slack-hash" style="font-size:2.5rem; color:#4a154b; margin-bottom:1rem;"></i>
+              <h4>Vortex Tech</h4>
+              <span>3 Open Jobs</span>
+            </div>
+            <div class="company-logo-card">
+              <i class="fab fa-salesforce" style="font-size:2.5rem; color:#00a1e0; margin-bottom:1rem;"></i>
+              <h4>SaaSify</h4>
+              <span>5 Open Jobs</span>
+            </div>
+            <div class="company-logo-card">
+              <i class="fab fa-atlassian" style="font-size:2.5rem; color:#0052cc; margin-bottom:1rem;"></i>
+              <h4>Apex Creative</h4>
+              <span>2 Open Jobs</span>
+            </div>
+            <div class="company-logo-card">
+              <i class="fab fa-aws" style="font-size:2.5rem; color:#ff9900; margin-bottom:1rem;"></i>
+              <h4>CloudCore</h4>
+              <span>4 Open Jobs</span>
+            </div>
+            <div class="company-logo-card">
+              <i class="fab fa-hubspot" style="font-size:2.5rem; color:#ff7a59; margin-bottom:1rem;"></i>
+              <h4>ScaleLabs</h4>
+              <span>1 Open Job</span>
+            </div>
+            <div class="company-logo-card">
+              <i class="fab fa-jira" style="font-size:2.5rem; color:#0052cc; margin-bottom:1rem;"></i>
+              <h4>Helpdesk Inc</h4>
+              <span>6 Open Jobs</span>
+            </div>
+            
+            <!-- Second Set of Companies (Duplicate for Seamless Loop) -->
+            <div class="company-logo-card">
+              <i class="fab fa-slack-hash" style="font-size:2.5rem; color:#4a154b; margin-bottom:1rem;"></i>
+              <h4>Vortex Tech</h4>
+              <span>3 Open Jobs</span>
+            </div>
+            <div class="company-logo-card">
+              <i class="fab fa-salesforce" style="font-size:2.5rem; color:#00a1e0; margin-bottom:1rem;"></i>
+              <h4>SaaSify</h4>
+              <span>5 Open Jobs</span>
+            </div>
+            <div class="company-logo-card">
+              <i class="fab fa-atlassian" style="font-size:2.5rem; color:#0052cc; margin-bottom:1rem;"></i>
+              <h4>Apex Creative</h4>
+              <span>2 Open Jobs</span>
+            </div>
+            <div class="company-logo-card">
+              <i class="fab fa-aws" style="font-size:2.5rem; color:#ff9900; margin-bottom:1rem;"></i>
+              <h4>CloudCore</h4>
+              <span>4 Open Jobs</span>
+            </div>
+            <div class="company-logo-card">
+              <i class="fab fa-hubspot" style="font-size:2.5rem; color:#ff7a59; margin-bottom:1rem;"></i>
+              <h4>ScaleLabs</h4>
+              <span>1 Open Job</span>
+            </div>
+            <div class="company-logo-card">
+              <i class="fab fa-jira" style="font-size:2.5rem; color:#0052cc; margin-bottom:1rem;"></i>
+              <h4>Helpdesk Inc</h4>
+              <span>6 Open Jobs</span>
+            </div>
           </div>
         </div>
       </div>
@@ -405,7 +442,7 @@
               </div>
               <h3>Cracking the System Design Interview in 2026</h3>
               <p>An architectural guide detailing distributed systems caching, database scaling patterns, and microservices decoupling for developers.</p>
-              <a href="blog.html" class="article-readmore">Read Full Guide <i class="fas fa-arrow-right"></i></a>
+              <a href="404.html" class="article-readmore">Read Full Guide <i class="fas fa-arrow-right"></i></a>
             </div>
           </article>
           
@@ -420,7 +457,7 @@
               </div>
               <h3>Navigating Remote Tech Salaries &amp; Offers</h3>
               <p>How to research geo-arbitrage baselines, evaluate equity compensation plans, and structure remote salary negotiation arguments.</p>
-              <a href="blog.html" class="article-readmore">Read Full Guide <i class="fas fa-arrow-right"></i></a>
+              <a href="404.html" class="article-readmore">Read Full Guide <i class="fas fa-arrow-right"></i></a>
             </div>
           </article>
           
@@ -435,7 +472,7 @@
               </div>
               <h3>Structuring Technical Portfolios for SaaS Recruiter Audits</h3>
               <p>Key design requirements to highlight project contributions, code quality controls, and architectural impact on web portfolios.</p>
-              <a href="blog.html" class="article-readmore">Read Full Guide <i class="fas fa-arrow-right"></i></a>
+              <a href="404.html" class="article-readmore">Read Full Guide <i class="fas fa-arrow-right"></i></a>
             </div>
           </article>
         </div>
@@ -554,6 +591,7 @@
       duration: 800,
       easing: 'ease-in-out',
       once: false,
+      mirror: true,
       offset: 100
     });
     
@@ -630,9 +668,7 @@
       window.location.href = 'login.html';
     }
     
-    function viewCompany(compId) {
-      window.location.href = 'login.html';
-    }
+
   </script>
 
   <!-- Hero Image Slider Script -->

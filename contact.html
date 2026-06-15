@@ -25,7 +25,9 @@
   <div id="preloader">
     <div class="preloader-content">
       <img src="images/logo5.webp" alt="Stackly Icon Logo" class="preloader-logo">
-      <div class="preloader-spinner"></div>
+      <div class="preloader-line-wrap">
+        <div class="preloader-line"></div>
+      </div>
       <p class="preloader-text">Connecting talent with opportunity...</p>
     </div>
   </div>
@@ -356,6 +358,7 @@
       duration: 800,
       easing: 'ease-in-out',
       once: false,
+      mirror: true,
       offset: 100
     });
     

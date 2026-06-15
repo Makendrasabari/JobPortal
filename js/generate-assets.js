@@ -109,7 +109,7 @@ const heroIllustrationSVG = `
   <circle cx="140" cy="100" r="5" fill="#eab308" />
   <circle cx="155" cy="100" r="5" fill="#22c55e" />
   <rect x="180" y="90" width="240" height="20" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
-  <text x="300" y="104" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">stackly.io/talent/matching</text>
+  <text x="300" y="104" font-family="sans-serif" font-size="10" fill="#4486f2" text-anchor="middle">stackly.io/talent/matching</text>
   
   <g transform="translate(130, 150)">
     <rect width="340" height="90" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" />
@@ -117,7 +117,7 @@ const heroIllustrationSVG = `
     <text x="45" y="52" font-family="sans-serif" font-size="20" fill="#0ea5e9" text-anchor="middle" font-weight="bold">SC</text>
     <rect x="90" y="22" width="120" height="10" rx="3" fill="#0f172a" />
     <rect x="90" y="40" width="80" height="7" rx="3" fill="#64748b" />
-    <rect x="90" y="55" width="100" height="7" rx="3" fill="#94a3b8" />
+    <rect x="90" y="55" width="100" height="7" rx="3" fill="#4486f2" />
     <rect x="250" y="20" width="70" height="24" rx="12" fill="#dcfce7" />
     <text x="285" y="36" font-family="sans-serif" font-size="11" font-weight="bold" fill="#15803d" text-anchor="middle">98% Match</text>
     <circle cx="238" cy="32" r="4" fill="#22c55e" />
@@ -129,7 +129,7 @@ const heroIllustrationSVG = `
     <text x="45" y="52" font-family="sans-serif" font-size="20" fill="#7c3aed" text-anchor="middle" font-weight="bold">EM</text>
     <rect x="90" y="22" width="130" height="10" rx="3" fill="#0f172a" />
     <rect x="90" y="40" width="90" height="7" rx="3" fill="#64748b" />
-    <rect x="90" y="55" width="70" height="7" rx="3" fill="#94a3b8" />
+    <rect x="90" y="55" width="70" height="7" rx="3" fill="#4486f2" />
     <rect x="250" y="20" width="70" height="24" rx="12" fill="#dcfce7" />
     <text x="285" y="36" font-family="sans-serif" font-size="11" font-weight="bold" fill="#15803d" text-anchor="middle">95% Match</text>
     <circle cx="238" cy="32" r="4" fill="#22c55e" />
