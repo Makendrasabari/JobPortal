@@ -194,7 +194,7 @@ html[style*="visibility: hidden"] body { visibility: hidden; }
   z-index: 200;
   width: 100%;
   max-width: 100%;
-  overflow: hidden;
+  overflow: visible;
   gap: 1rem;
 }
 

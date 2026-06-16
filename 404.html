@@ -173,6 +173,7 @@
     .error-actions {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       gap: 1rem;
       animation: errorFadeIn 0.8s ease 0.3s both;
     }
@@ -199,6 +200,7 @@
       <p>We couldn't connect you to this page. The resource may have been relocated or matches are unavailable.</p>
       
       <div class="error-actions">
+        <button onclick="window.history.back()" class="btn btn-outline" style="border-color: rgba(255,255,255,0.2); color: var(--white); cursor: pointer;"><i class="fas fa-arrow-left"></i> Go Back</button>
         <a href="index.html" class="btn btn-outline" style="border-color: rgba(255,255,255,0.2); color: var(--white);"><i class="fas fa-home"></i> Home</a>
         <button onclick="goToDashboard()" class="btn btn-primary" id="btn-404-dashboard" style="background: #4486f2; color: white;"><i class="fas fa-chart-line"></i> Dashboard</button>
       </div>

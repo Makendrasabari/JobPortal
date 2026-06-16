@@ -500,7 +500,7 @@ img {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2.5fr 1.5fr 1.5fr 1.5fr 2fr;
+  grid-template-columns: 2.5fr 1.5fr 1.5fr 2fr;
   gap: 3rem;
   margin-bottom: 4rem;
 }

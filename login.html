@@ -291,10 +291,24 @@
       alertBox.style.color = '#15803d';
       alertBox.textContent = 'Sign in successful! Redirecting...';
 
+      // Parse first name from username/email input
+      let parsedName = usernameInput;
+      if (parsedName.includes('@')) {
+        parsedName = parsedName.split('@')[0];
+      }
+      // Remove any trailing or inline numbers to get a clean first name
+      parsedName = parsedName.replace(/[0-9]/g, '');
+      // Capitalize first letter
+      if (parsedName.length > 0) {
+        parsedName = parsedName.charAt(0).toUpperCase() + parsedName.slice(1);
+      } else {
+        parsedName = 'User';
+      }
+
       // Persist entered name/email so dashboards can display it
       const session = {
         username: usernameInput,
-        fullName: usernameInput,
+        fullName: parsedName,
         email: usernameInput.includes('@') ? usernameInput : (usernameInput + '@stackly.com'),
         role: selectedRole
       };
