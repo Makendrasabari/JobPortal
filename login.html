@@ -164,6 +164,20 @@
       .auth-split { grid-template-columns: 1fr; }
       .auth-panel-left { display: none; }
     }
+    .input-error {
+      border-color: #dc2626 !important;
+    }
+    .input-error:focus {
+      box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.1) !important;
+    }
+    .inline-error-message {
+      color: #dc2626;
+      font-size: 0.825rem;
+      margin-top: 0.35rem;
+      font-weight: 500;
+      text-align: left;
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -230,7 +244,8 @@
           </div>
 
           <div class="form-group">
-            <input type="text" placeholder="Email or Username" id="login-username" autocomplete="email username">
+            <input type="email" placeholder="Gmail Address" id="login-username" autocomplete="email">
+            <div id="login-email-error" class="inline-error-message">Please enter a valid Gmail address (e.g., example@gmail.com).</div>
           </div>
           
           <div class="form-group">
@@ -262,10 +277,29 @@
   <!-- JS Scripts -->
   <script src="js/auth.js?v=2.0"></script>
   <script>
+    // Real-time input validation for Gmail
+    document.addEventListener('DOMContentLoaded', () => {
+      const emailInput = document.getElementById('login-username');
+      const emailError = document.getElementById('login-email-error');
+      if (emailInput && emailError) {
+        emailInput.addEventListener('input', function() {
+          if (emailInput.classList.contains('input-error')) {
+            const gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/i;
+            if (gmailRegex.test(emailInput.value.trim())) {
+              emailInput.classList.remove('input-error');
+              emailError.style.display = 'none';
+            }
+          }
+        });
+      }
+    });
+
     function handleLoginSubmit(e) {
       e.preventDefault();
       
-      const usernameInput = document.getElementById('login-username').value.trim();
+      const emailInput = document.getElementById('login-username');
+      const emailError = document.getElementById('login-email-error');
+      const usernameInput = emailInput.value.trim();
       const passwordInput = document.getElementById('login-password').value;
       const selectedRole = document.querySelector('input[name="login-role"]:checked').value;
       const alertBox = document.getElementById('auth-alert');
@@ -276,12 +310,25 @@
       alertBox.style.color = '';
       alertBox.textContent = '';
       
-      // Only check: both fields must be non-empty
-      if (!usernameInput || !passwordInput) {
+      // Clear email inline error
+      emailInput.classList.remove('input-error');
+      emailError.style.display = 'none';
+      
+      // Gmail validation
+      const gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/i;
+      if (!gmailRegex.test(usernameInput)) {
+        emailInput.classList.add('input-error');
+        emailError.style.display = 'block';
+        emailInput.focus();
+        return;
+      }
+      
+      // Only check: password must be non-empty (email is checked above)
+      if (!passwordInput) {
         alertBox.style.display = 'block';
         alertBox.style.backgroundColor = '#fee2e2';
         alertBox.style.color = '#b91c1c';
-        alertBox.textContent = 'Please enter Email and Password.';
+        alertBox.textContent = 'Please enter Password.';
         return;
       }
       
